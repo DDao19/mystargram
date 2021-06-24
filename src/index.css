@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap");
+
+:root {
+  /* COLORS */
+  --primary: #f79489;
+  --secondary: #67595e;
+  --error: #ff4a4a;
+  --background: #fff7f6;
+  /* FONTS */
+  --fontOne: "Lato", sans-serif;
+  --fontTwo: "Cormorant Garamond", serif;
+}
+
+/* base styles & title */
+body {
+  font-family: var(--fontOne);
+  color: var(--secondary);
+  background-color: var(--background);
+}
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.title h1 {
+  font-family: var(--fontTwo);
+  color: var(--primary);
+
+  font-size: 1.7rem;
+  letter-spacing: 5px;
+  font-weight: normal;
+}
+
+.title h2,
+.title p {
+  text-align: center;
+  letter-spacing: 2px;
+}
+.title h2 {
+  margin-top: 60px;
+  font-size: 2.6rem;
+}
+
+/* upload form styles */
+
+/* progress bar styles */
+
+/* image grid styles */
+
+/* modal styles */

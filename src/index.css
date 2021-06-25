@@ -6,7 +6,9 @@
   --primary: #f79489;
   --secondary: #67595e;
   --error: #ff4a4a;
+  /* Radial Gradient Colors */
   --background: #fff7f6;
+  --backgroundTwo: #ffc7c0;
   /* FONTS */
   --fontOne: "Lato", sans-serif;
   --fontTwo: "Cormorant Garamond", serif;
@@ -16,11 +18,16 @@
 body {
   font-family: var(--fontOne);
   color: var(--secondary);
-  background-color: var(--background);
+  background: radial-gradient(
+    ellipse at top,
+    var(--background) 50%,
+    var(--backgroundTwo) 100%
+  );
 }
 .App {
   max-width: 960px;
   margin: 0 auto;
+  height: 100vh;
 }
 .title h1 {
   font-family: var(--fontTwo);

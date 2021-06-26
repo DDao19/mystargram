@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ProgressBar from "./ProgressBar";
 
 const UploadForm = () => {
   const [file, setFile] = useState();
@@ -7,7 +8,7 @@ const UploadForm = () => {
 
   const handleChange = (e) => {
     let uploadedFile = e.target.files[0];
-
+    // check file type uploaded error handler
     if (uploadedFile && fileTypes.includes(uploadedFile.type)) {
       setFile(uploadedFile);
       setError(); //if user uploads a valid image after an invalid one, it resets the error msg (error msg removed).
@@ -21,10 +22,15 @@ const UploadForm = () => {
 
   return (
     <form>
-      <input type="file" onChange={handleChange} />
+      <h5 className="upload">Click To Upload</h5>
+      <label>
+        <input type="file" onChange={handleChange} />
+        <span>+</span>
+      </label>
       <div className="output">
         {error && <div className="error">{error}</div>}
         {file && <div>{file.name}</div>}
+        {file && <ProgressBar file={file} setFile={setFile} />}
       </div>
     </form>
   );

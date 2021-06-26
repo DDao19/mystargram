@@ -1,6 +1,6 @@
-import * as firebase from "firebase/app"; //We downloaded firebase package via npm.
-import "firebase/storage"; //Firebase Services: For our storage
-import "firebase/firestore"; //Firebase Services: For our database
+import { firebase } from "@firebase/app"; //We downloaded firebase package via npm.
+import "@firebase/storage"; //Firebase Services: For our storage
+import "@firebase/firestore"; //Firebase Services: For our database
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -17,5 +17,6 @@ firebase.initializeApp(firebaseConfig);
 // Anytime we want to interact with the firestore or storage, we use these consts.
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
-export { projectStorage, projectFirestore }; //export so we can use in other files in the future.
+export { projectStorage, projectFirestore, timestamp }; //export so we can use in other files in the future.
